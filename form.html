@@ -34,6 +34,18 @@
     <script src="js/bootstrap-datepicker.js"></script>
 
     <script type="text/javascript" src="js/featureRequest.js"></script>
+    <style type="text/css">
+        .active {
+            text-decoration: none;
+            background-color: #eee;
+            color: #383737;
+        }
+        .nav > li.active > a:hover {
+            text-decoration: none!important;
+            background-color: #eee!important;
+            color: #383737!important;
+        }
+    </style>
 </head>
 
 <!-- Body Starts-->
@@ -43,21 +55,21 @@
         <header class="stick">
             <div class="logo"><a href="index.html" title=""><img src="./img/logo.png" alt=""></a></div>
             <nav>
-                <ul class="nav">
-                    <li class="current active"><a href="index.html" title="">Home</a></li>
-                    <li class=""><a href="form.html" title="">Form</a></li>
+                <ul class="nav" id="navlist">
+                    <li class=""><a href="index.html" title="">Home</a></li>
+                    <li class="active"><a class="active" href="form.html" title="">Form</a></li>
                     <li class=""><a href="listing.html" title="">Listing</a></li>
                 </ul>
             </nav>
             <a class="menu-btn" href="#" title=""><i class="fa fa-bars"></i></a>
             <div class="header-exts">
+                <a class="contact-btn" href="contact.html" title="">Contact Us</a>
                 <div class="socials">
                     <a href="#" title=""><i class="fa fa-facebook"></i></a>
                     <a href="#" title=""><i class="fa fa-twitter"></i></a>
                     <a href="#" title=""><i class="fa fa-linkedin"></i></a>
                     <a href="#" title=""><i class="fa fa-pinterest"></i></a>
                 </div>
-                <a class="contact-btn" href="contact.html" title="">Contact Us</a>
             </div>
         </header><!-- Header Nav Ends-->
         <!-- Form Content Starts -->
@@ -144,7 +156,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,10 +289,11 @@
                 map: map,
                 icon: image
             });
+
+            $('#navlist li').load(function(e) {
+              $('.active').addClass('selected');
+        });
         });
     </script>
-
-
-
 </body>
 </html>

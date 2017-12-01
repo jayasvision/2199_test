@@ -25,8 +25,21 @@
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/31/2/onion.js"></script>
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/31/2/controls.js"></script>
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/31/2/stats.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      </head>
+      <style type="text/css">
+		.active {
+			text-decoration: none;
+			background-color: #eee;
+			color: #383737;
+		}
+        .nav > li.active > a:hover {
+			text-decoration: none!important;
+			background-color: #eee!important;
+			color: #383737!important;
+		}
+		</style>
+	</head>
 
 <!-- Body Starts-->
 <body cz-shortcut-listen="true">
@@ -35,21 +48,21 @@
 		<header class="stick">
 			<div class="logo"><a href="index.html" title=""><img src="./img/logo.png" alt=""></a></div>
 			<nav>
-				<ul class="nav">
-			<li class="current active"><a href="index.html" title="">Home</a></li>
+				<ul class="nav" id="navlist">
+			<li class="active"><a href="index.html" title="">Home</a></li>
 					<li class=""><a href="form.html" title="">Form</a></li>
 					<li class=""><a href="listing.html" title="">Listing</a></li>
 				</ul>
 			</nav>
 			<a class="menu-btn" href="#" title=""><i class="fa fa-bars"></i></a>
 			<div class="header-exts">
-				<div class="socials">
-					<a href="#" title=""><i class="fa fa-facebook"></i></a>
-					<a href="#" title=""><i class="fa fa-twitter"></i></a>
-					<a href="#" title=""><i class="fa fa-linkedin"></i></a>
-					<a href="#" title=""><i class="fa fa-pinterest"></i></a>
-				</div>
 				<a class="contact-btn" href="contact.html" title="">Contact Us</a>
+                <div class="socials">
+                    <a href="#" title=""><i class="fa fa-facebook"></i></a>
+                    <a href="#" title=""><i class="fa fa-twitter"></i></a>
+                    <a href="#" title=""><i class="fa fa-linkedin"></i></a>
+                    <a href="#" title=""><i class="fa fa-pinterest"></i></a>
+                </div>
 			</div>
 		</header><!-- Header Nav Ends-->
         
@@ -187,6 +200,11 @@
 			  map:map,
 			  icon:image
 			});
+		});
+		$('#navlist a').load(function(e) {
+		    //e.preventDefault(); //prevent the link from being followed
+		   // $('#navlist a').removeClass('selected');
+		    $('.active').addClass('selected');
 		});
 	</script>
 

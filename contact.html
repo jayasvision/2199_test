@@ -25,7 +25,12 @@
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/31/2/stats.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!-- Styles  and JS Ends-->
-      </head>
+		<style type="text/css">
+		.selected {
+			color: red;
+		}
+		</style>
+	</head>
       
 <!-- Body Starts-->
 <body cz-shortcut-listen="true">
@@ -42,13 +47,13 @@
 			</nav>
 			<a class="menu-btn" href="#" title=""><i class="fa fa-bars"></i></a>
 			<div class="header-exts">
-				<div class="socials">
-					<a href="#" title=""><i class="fa fa-facebook"></i></a>
-					<a href="#" title=""><i class="fa fa-twitter"></i></a>
-					<a href="#" title=""><i class="fa fa-linkedin"></i></a>
-					<a href="#" title=""><i class="fa fa-pinterest"></i></a>
-				</div>
 				<a class="contact-btn" href="contact.html" title="">Contact Us</a>
+                <div class="socials">
+                    <a href="#" title=""><i class="fa fa-facebook"></i></a>
+                    <a href="#" title=""><i class="fa fa-twitter"></i></a>
+                    <a href="#" title=""><i class="fa fa-linkedin"></i></a>
+                    <a href="#" title=""><i class="fa fa-pinterest"></i></a>
+                </div>
 			</div>
 		</header><!-- Header Nav Ends-->
         
@@ -124,23 +129,23 @@
 			<div class="block remove-bottom darkblue">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6">	
+						<div class="col-md-6 col-xs-12">
 							<div class="simple-title">
 								<h3><i>Let’s</i> Get in Touch</h3>
 								  <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 							</div>
 							<form class="contact-form">
 								<div class="row">
-									<div class="col-md-6"><input type="text" placeholder="Name"></div>
-									<div class="col-md-6"><input type="email" placeholder="Email"></div>
-									<div class="col-md-12"><input type="text" placeholder="Subject"></div>
-									<div class="col-md-12"><textarea placeholder="Message"></textarea></div>
-									<div class="col-md-12"><button class="simple-btn" type="submit">Send Message</button></div>
+									<div class="col-md-6 margin-bottom-10"><input type="text" placeholder="Name"></div>
+									<div class="col-md-6 margin-bottom-10"><input type="email" placeholder="Email"></div>
+									<div class="col-md-12 margin-bottom-10"><input type="text" placeholder="Subject"></div>
+									<div class="col-md-12 margin-bottom-10"><textarea placeholder="Message"></textarea></div>
+									<div class="col-md-12 margin-bottom-10"><button class="simple-btn" type="submit">Send Message</button></div>
 								</div>
 							</form><!-- Contact Form -->
 						</div>
 
-						<div class="col-md-6">	
+						<div class="col-md-6 col-xs-12">
 							<div class="simple-title">
 								<h3><i>FIND</i> Us Here</h3>
 							  <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
@@ -207,6 +212,10 @@
 			  map:map,
 			  icon:image
 			});
+		});
+
+		$(document).ready(function(){
+		        $('.contact-btn').addClass('selected');
 		});
 	</script>
 

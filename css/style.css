@@ -419,9 +419,10 @@ nav ul li.active a:after{
     position:absolute;
     right:0;
     top:100%;
+    width: 100%;
 }
 .socials{
-    float:left;
+    float:right;
     margin-right:-40px;
     margin-top:1px;
     padding:8px 60px 8px 20px;
@@ -453,7 +454,7 @@ nav ul li.active a:after{
 }
 .contact-btn{
     color:#eee;
-    float:left;
+    float:right;
     font-size:14px;
     font-weight:700;
     margin-right:-40px;
@@ -1491,6 +1492,7 @@ form.slash-subscribe input{
     font-size:16px;
     font-weight:600;
     height:56px;
+    width: 100%;
     padding:5px 35px;
     text-transform:capitalize;
     -webkit-border-radius:30px;
@@ -2807,7 +2809,7 @@ footer p{
 }
 
 .table {
-    table-layout: fixed;
+    table-layout: auto;
     word-wrap: break-word;
     font-size: 14px;
 }
@@ -3019,6 +3021,10 @@ used to vertically center elements, may need modification if you're not using de
     height: 34px;
 }
 
+.panel-table .panel-footer .panel-footer-inner {
+    text-align: left;
+}
+
 .panel-table .panel-heading .col h3 {
     line-height: 30px;
     height: 30px;
@@ -3042,7 +3048,7 @@ body {
 
 .pageSize {
     display: inline-block !important;
-    width: 30% !important;
+    width: auto !important;
     height: 30px !important;
 }
 .add-on .input-group-btn > .btn {
@@ -3070,4 +3076,48 @@ body {
 
 .glyphicon-search:before {
     content: "\e002";
+}
+.nav>li>a:hover {
+    text-decoration: none!important;
+    background-color: rgba(0, 0, 0, .075)!important;
+    color: white!important;
+}
+
+/*Classes for bottom spacing*/
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.search-container {
+    text-align: right;
+}
+.search-container .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    margin-right: 10px;
+}
+
+.search-container input[type="text"] {
+    background-color: white;
+    width: 151px;
+    height: 31px;
+    float: none;
+    /* margin-left: 283px; */
+    display: inline-block;
+    vertical-align: top;
+}
+
+.input-group[class*=col-] {
+    padding-left: 15px !important;
+    padding-right: 0;
 }

@@ -146,7 +146,24 @@ var featureRequestViewModel = function () {
       
         let postUpdateUrl = id === undefined ? self.baseUrl + "/feature_requests" : self.baseUrl + "/feature_requests/" + id
 
-        $.ajax({            type: id === undefined ? 'POST' : 'PATCH',            async: false,            url: postUpdateUrl,            contentType: "application/json; charset=utf-8",            dataType: "json",            crossDomain: true,            data: JSON.stringify(featureObj),            success: function (data) {                self.showLoader(false);                alert('Feature Request saved successfully.')                window.location.href = "listing.html";            },            error: function (data) {                self.showLoader(false);                alert('Something went wrong!! Please try once again.')                //window.location.href = self.indexPageUrl;            }
+        $.ajax({
+            type: id === undefined ? 'POST' : 'PATCH',
+            async: false,
+            url: postUpdateUrl,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            crossDomain: true,
+            data: JSON.stringify(featureObj),
+            success: function (data) {
+                self.showLoader(false);
+                alert('Feature Request saved successfully.')
+                window.location.href = "listing.html";
+            },
+            error: function (data) {
+                self.showLoader(false);
+                alert('Something went wrong!! Please try once again.')
+                //window.location.href = self.indexPageUrl;
+            }
         });
 
         self.showLoader(false);

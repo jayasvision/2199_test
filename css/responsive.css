@@ -64,10 +64,11 @@ header,header.stick{padding:20px 10px 10px}
 header.stick{position:absolute}
 .logo{max-width:none}
 .logo img{max-width:none!important;width:140px!important}
-.header-exts{position:relative;float:left;width:100%;top:auto;margin:20px 0 0}
-.socials{width:50%;padding:6px 0px;background:rgba(0,0,0,1);margin:0;text-align:center}
+/*.header-exts{position:relative;float:left;width:100%;top:auto;margin:20px 0 0}*/
+.socials{background:black; opacity: 0.2;}
+
 .socials a{width:25px;float:none;display:inline-block;font-size:13px}
-.socials:before{display:none}
+/*.socials:before{display:none}*/
 header.style2 .socials a{color:#eee}
 .skewed-btn{float:left;width:50%;padding:8px 0;text-align:center;font-size:13px}
 .skewed-btn:before{transform:skew(0)}
@@ -85,6 +86,10 @@ header.style2 .socials a{color:#eee}
 .simple-parallax p{padding:0}
 .slide-text h2{font-size:40px}
 .slide-text p{font-size:23px}
+.search-container {
+	text-align: left;
+	margin-top: 10px;
+}
 }
 
 @media (max-width:480px){

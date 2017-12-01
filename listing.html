@@ -37,7 +37,18 @@
 
 
     <script type="text/javascript" src="js/featureRequest.js"></script>
-
+    <style type="text/css">
+        .active {
+            text-decoration: none;
+            background-color: #eee;
+            color: #383737;
+        }
+        .nav > li.active > a:hover {
+            text-decoration: none!important;
+            background-color: #eee!important;
+            color: #383737!important;
+        }
+    </style>
 </head>
 
 <!-- Body Starts-->
@@ -47,21 +58,21 @@
         <header class="stick">
             <div class="logo"><a href="index.html" title=""><img src="./img/logo.png" alt=""></a></div>
             <nav>
-                <ul class="nav">
-                    <li class="current active"><a href="index.html" title="">Home</a></li>
+                <ul class="nav" id="navlist">
+                    <li class=""><a href="index.html" title="">Home</a></li>
                     <li class=""><a href="form.html" title="">Form</a></li>
-                    <li class=""><a href="listing.html" title="">Listing</a></li>
+                    <li class="active"><a class="active" href="listing.html" title="">Listing</a></li>
                 </ul>
             </nav>
             <a class="menu-btn" href="#" title=""><i class="fa fa-bars"></i></a>
             <div class="header-exts">
+                <a class="contact-btn" href="contact.html" title="">Contact Us</a>
                 <div class="socials">
                     <a href="#" title=""><i class="fa fa-facebook"></i></a>
                     <a href="#" title=""><i class="fa fa-twitter"></i></a>
                     <a href="#" title=""><i class="fa fa-linkedin"></i></a>
                     <a href="#" title=""><i class="fa fa-pinterest"></i></a>
                 </div>
-                <a class="contact-btn" href="contact.html" title="">Contact Us</a>
             </div>
         </header><!-- Header Nav Ends-->
         <!-- Listing Content Starts -->
@@ -73,63 +84,69 @@
                             <div class="title">
                                 <h3>Featured App Listing</h3><br /><br /><br /><br />
                                 <!--Knockout JS Code-->
-                                <div style="position:relative;height:0;padding-bottom:56.25%">
+                                <div style="position:relative;">
                                     <!--<iframe src="http://34.207.163.110/" width="640" height="450" frameborder="0" gesture="media" allow="encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>-->
 
-                                    <div class="col-md-10 col-md-offset-1">
+                                    <div class="col-md-10 col-xs-12 col-md-offset-1">
                                         <div class="panel panel-default panel-table">
                                             <div class="panel-heading">
                                                 <div class="row">
-                                                    <div class="col col-xs-6">
+                                                    <div class="col col-md-6 col-xs-12">
                                                         <a class="btn btn-sm btn-primary btn-create" href="form.html"><em class="fa fa-plus paddingLeft1"></em>Create New Feature</a>
                                                     </div>
 
-                                                    <div class=" col col-xs-6 input-group add-on">
-                                                        <input class="form-control" data-bind="value:featureViewModel.searchField,valueUpdate: 'afterkeydown',event: {keyup: featureViewModel.searchFeatures}" style="background-color: white;width: 151px;height: 31px; margin-left: 283px;" placeholder="Search" name="srch-term" id="srch-term" type="text">
-                                                        <div class="input-group-btn">
-                                                            <button class="btn btn-default" data-bind="click:featureViewModel.searchFeatureRequests" style="margin-left: -3px;" type="button">
-                                                                <i class="fa fa-search"></i>
-                                                            </button>
+                                                    <div class=" col col-md-6 col-xs-12 input-group add-on">
+                                                        <div class="search-container">
+                                                            <input class="form-control" data-bind="value:featureViewModel.searchField,valueUpdate: 'afterkeydown',event: {keyup: featureViewModel.searchFeatures}" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                                                            <div class="input-group-btn">
+                                                                <button class="btn btn-default" data-bind="click:featureViewModel.searchFeatureRequests" style="margin-left: -3px;" type="button">
+                                                                    <i class="fa fa-search"></i>
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel-body">
                                                 <div class="loading" data-bind="visible:featureViewModel.showLoader">Loading</div>
-                                                <table class="table table-striped table-bordered table-list" id="tablepaging">
-                                                    <thead>
-                                                        <tr style="font-weight:bold;">
-                                                            <th style="width:6%;"><em class="fa fa-cog"></em></th>
-                                                            <th style="text-align: left;">Title</th>
-                                                            <th style="text-align: left;">Description</th>
-                                                            <th style="text-align: left;">Client</th>
-                                                            <th style="width: 12%;">Client Priority</th>
-                                                            <th style="text-align: left;">Target Date</th>
-                                                            <th style="text-align: left;">Product Area</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody data-bind="foreach: featureViewModel.features">
-                                                        <tr>
-                                                            <td >
-                                                                <a class="btn btn-default" data-bind="attr:{href:'form.html?id='+id()}"><em class="fa fa-pencil"></em></a>
-                                                                <!--<a class="btn btn-danger" data-bind="event:{click:featureViewModel.deleteFeature(id())}" style="margin-left: 5px;"><em class="fa fa-trash"></em></a>-->
-                                                            </td>
-                                                            <td style="text-align: left;"> <span data-bind="text: title"></span> </td>
-                                                            <td style="text-align: left;"> <span data-bind="text: description"></span></td>
-                                                            <td style="text-align: left;"> <span data-bind="text: client"></span></td>
-                                                            <td style="text-align: left;"> <span data-bind="text: clientPriority"></span> </td>
-                                                            <td style="text-align: left;"> <span data-bind="text: targetDate"></span> </td>
-                                                            <td style="text-align: left;"> <span data-bind="text: productArea"></span> </td>
-                                                        </tr>
-                                                    </tbody> <!-- END TBODY -->
-                                                </table>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered table-list" id="tablepaging">
+                                                        <thead>
+                                                            <tr style="font-weight:bold;">
+                                                                <th style="width:6%;"><em class="fa fa-cog"></em></th>
+                                                                <th style="text-align: left;">Title</th>
+                                                                <th class="hidden-xs hidden-sm" style="text-align: left;">Description</th>
+                                                                <th style="text-align: left;">Client</th>
+                                                                <th class="hidden-xs hidden-sm" style="width: 12%;">Client Priority</th>
+                                                                <th class="hidden-xs" style="text-align: left;">Target Date</th>
+                                                                <th class="hidden-xs" style="text-align: left;">Product Area</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody data-bind="foreach: featureViewModel.features">
+                                                            <tr>
+                                                                <td >
+                                                                    <a class="btn btn-default" data-bind="attr:{href:'form.html?id='+id()}"><em class="fa fa-pencil"></em></a>
+                                                                    <!--<a class="btn btn-danger" data-bind="event:{click:featureViewModel.deleteFeature(id())}" style="margin-left: 5px;"><em class="fa fa-trash"></em></a>-->
+                                                                </td>
+                                                                <td style="text-align: left;"> <span data-bind="text: title"></span> </td>
+                                                                <td class="hidden-xs hidden-sm" style="text-align: left;"> <span data-bind="text: description"></span></td>
+                                                                <td style="text-align: left;"> <span data-bind="text: client"></span></td>
+                                                                <td class="hidden-xs hidden-sm" style="text-align: left;"> <span data-bind="text: clientPriority"></span> </td>
+                                                                <td class="hidden-xs" style="text-align: left;"> <span data-bind="text: targetDate"></span> </td>
+                                                                <td class="hidden-xs" style="text-align: left;"> <span data-bind="text: productArea"></span> </td>
+                                                            </tr>
+                                                        </tbody> <!-- END TBODY -->
+                                                    </table>
+                                                </div>
                                             </div>
                                             <div class="panel-footer">
                                                 <div class="row">
-                                                    <div class="col col-xs-4">
-                                                        <label for="email" style="margin-left: -110px;">Page Size:</label>
-                                                        <select data-bind="options:featureViewModel.pageSize,value:featureViewModel.selectedPageSize,optionsText:function(item){return item;},event: { change: featureViewModel.pageSizeChange }"
-                                                                class="form-control pageSize"></select>
+                                                    <div class="col col-md-4 col-xs-12">
+                                                        <div class="panel-footer-inner">
+                                                            <label for="email">Page Size:</label>
+                                                            <select data-bind="options:featureViewModel.pageSize,value:featureViewModel.selectedPageSize,optionsText:function(item){return item;},event: { change: featureViewModel.pageSizeChange }"
+                                                                    class="form-control pageSize"></select>
+                                                        </div>
                                                     </div>
                                                     <!--<div class="col col-xs-8">
                                                         <ul class="pagination hidden-xs pull-right">
@@ -239,7 +256,10 @@
         })
     </script>
 
-
-
+    <script type="text/javascript">
+         $('#navlist li').load(function(e) {
+            $('.active').addClass('selected');
+        })
+    </script>
 </body>
 </html>
