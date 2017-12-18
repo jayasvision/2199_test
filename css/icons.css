@@ -1,0 +1,78 @@
+{
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-technology:before {
+  content: "\e900";
+}
+.icon-business:before {
+  content: "\e901";
+}
+.icon-square:before {
+  content: "\e902";
+}
+.icon-like:before {
+  content: "\e903";
+}
+.icon-shopping-basket:before {
+  content: "\e904";
+}
+.icon-car:before {
+  content: "\e905";
+}
+.icon-flash:before {
+  content: "\e906";
+}
+.icon-placeholder:before {
+  content: "\e907";
+}
+.icon-speech-bubble:before {
+  content: "\e908";
+}
+.icon-plug:before {
+  content: "\e909";
+}
+.icon-rain:before {
+  content: "\e90a";
+}
+.icon-woman:before {
+  content: "\e90b";
+}
+.icon-medical-result:before {
+  content: "\e90c";
+}
+.icon-cloud:before {
+  content: "\e90d";
+}
+.icon-sun:before {
+  content: "\e90e";
+}
+.icon-monitor:before {
+  content: "\e90f";
+}
+.icon-smartphone:before {
+  content: "\e910";
+}
+.icon-photo-camera:before {
+  content: "\e911";
+}
+.icon-mail:before {
+  content: "\e912";
+}
+.icon-light-bulb:before {
+  content: "\e913";
+}
+
+.glyphicon-search:before {
+    content: "\e002";
+}

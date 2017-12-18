@@ -1,0 +1,121 @@
+@media (max-width:1200px){
+.featured-hirecoder-app{margin-top:40px}
+.featured-hirecoder-app h2{font-size:50px}
+.featured-hirecoder-app p{font-size:19px}
+.featured-hirecoder-app a.btn,
+.featured-hirecoder-app.style2 a.simple-btn{font-size:15px;text-align:center}
+.featured-hirecoder-app a.video-btn{margin-left:40px;font-size:19px}
+.featured-hirecoder-app a.video-btn i{font-size:33px;height:45px;width:45px;padding:5px}
+.featured-inner h4{font-size:16px}
+.featured-inner > p{font-size:14px;line-height:1.6}
+.double-mockup.overlap{margin-top:-45px}
+.contact-box{padding:30px 10px 20px}
+.mockup{text-align:center}
+.mockup img{float:none;display:inline-block}
+.hirecoder-featured{margin:50px 0 0}
+.simple-featured-hirecoder-app{top:130px}
+.saas-intro-img img{width:600px}
+}
+
+@media (max-width:980px){
+.hirecoder-featured .row > div{float:left;width:100%;margin:0 0 50px}
+.hirecoder-featured .row > div:last-child{margin:0}
+
+form.slash-subscribe{width:100%}
+.slash-newsletter{padding:70px 30px}
+.contact-box{margin:0 0 30px}
+nav{position:fixed;right:-260px;top:0;width:260px;height:100%;background:#FFF;z-index:10;padding:20px;overflow:auto;
+    -webkit-box-shadow:0 0 6px rgba(0,0,0,0.3);
+    -moz-box-shadow:0 0 6px rgba(0,0,0,0.3);
+    -ms-box-shadow:0 0 6px rgba(0,0,0,0.3);
+    -o-box-shadow:0 0 6px rgba(0,0,0,0.3);
+    box-shadow:0 0 6px rgba(0,0,0,0.3);
+}
+nav .nav li{float:left;width:100%;color:#626262;font-weight:400}
+nav ul.nav li a{padding:14px 0px;float:left;border-bottom:1px solid #E2E2E2;width:100%;font-size:13px}
+nav .nav li a:hover{color:#626262}
+nav ul.nav{float:left;width:100%;background:#f5f5f5;padding:10px 25px 10px}
+nav ul.nav li:last-child a{border:0}
+nav ul.nav li a::before,nav ul.nav li a:after{display:none}
+.menu-btn{display:block}
+nav.active{right:0}
+.slash-video.overlap{margin:0}
+.featured-boxes .row > div{float:left;width:50%}
+.simple-featured-hirecoder-app{top:110px}
+.simple-featured-hirecoder-app h2{font-size:40px;margin:0 0 10px}
+.simple-featured-hirecoder-app > p{font-size:18px;width:100%}
+.pointing-mockup{display:table;margin:0 auto}
+.features-intro .simple-text, .simple-text.style2{display:unset;float:left;width:100%;padding:0;margin:0 0 40px}
+.special-img{float:left;width:100%;margin:0}
+.special-text{float:left;width:100%;margin:0}
+.center-mockup{margin:50px 0}
+.mockup-slide{text-align:center}
+.mockup-slide img{display:inline-block;float:none;max-width:100%}
+.slide-text{display:unset;float:left;width:100%;text-align:center}
+.slide-text p{text-align:center}
+.slide-text span{margin:0 0 40px}
+blockquote{margin:40px 0 50px;width:100%}
+}
+
+
+@media (max-width:767px){
+.block .container,.container{padding:0 15px}
+header,header.stick{padding:20px 10px 10px}
+header.stick{position:absolute}
+.logo{max-width:none}
+.logo img{max-width:none!important;width:140px!important}
+.header-exts{position:relative;float:left;width:100%;top:auto;margin:20px 0 0}
+.socials{width:50%;padding:6px 0px;background:rgba(0,0,0,1);margin:0;text-align:center}
+.socials a{width:25px;float:none;display:inline-block;font-size:13px}
+.socials:before{display:none}
+header.style2 .socials a{color:#eee}
+.skewed-btn{float:left;width:50%;padding:8px 0;text-align:center;font-size:13px}
+.skewed-btn:before{transform:skew(0)}
+.title > p{width:400px}
+.logos > li{width:50%!important}
+.simple-featured-hirecoder-app{position:relative;float:left;width:100%;top:0;padding:40px 20px;background:#E5E5E5}
+.features-intro{display:unset}
+.pointing-mockup{text-align:center;padding:0}
+.pointing-mockup img{float:none;max-width:100%}
+.pointer-info{position:relative;float:left;width:100%;top:0 !important;padding:0;left:0 !important;margin:10px 0 0;background:#F3F3F3;padding:30px !important}
+.pointer-info:before,.pointer-info:after{display:none}
+.special-text{padding:40px}
+.special-text > h4{font-size:30px}
+.simple-parallax h3{font-size:35px}
+.simple-parallax p{padding:0}
+.slide-text h2{font-size:40px}
+.slide-text p{font-size:23px}
+}
+
+@media (max-width:480px){
+.featured-hirecoder-app h2{font-size:34px}
+.featured-hirecoder-app p{font-size:16px}
+.featured-hirecoder-app a.btn{width:100%;margin:0 0 20px}
+.featured-hirecoder-app a.video-btn{width:100%;margin:0;text-align:center}
+.animateme{transform:none !important;opacity:1 !important}
+.title > p{width:100%}
+.featured-boxes .row > div{width:100%}
+.title > h3{font-size:30px}
+.hirecoder-app-facts .row > div{width:100%}
+.fun-fact i{font-size:40px;margin:0 0 10px}
+.fun-fact strong{font-size:40px}
+.slash-testimonials{padding:25px} 
+.review{display:unset}
+.review-img{display:unset;float:left;text-align:left}
+.img-inner{width:auto;float:non}
+.review-inner{display:unset;float:left;width:100%;padding:40px 0 0}
+.logos > li{width:100%!important}
+.featured-hirecoder-app.style2 > h2{font-size:33px}
+.apps-link > a{font-size:40px;margin-right:30px}
+.featured-hirecoder-app a.simple-btn{width:100%;margin:0 0 20px}
+.selectors.style2{min-width:0;margin:0 auto 30px}
+.selectors.style2 li a{font-size:14px;padding:13px 30px}
+.slash-video-featured.full-video{height:440px}
+.features-intro .simple-text h3{font-size:30px}
+.form-title h3{font-size:23px}
+.modern-contact-boxes span{font-size:20px}
+.startup-featured-hirecoder-app h2{font-size:31px}
+.gallery-img{position:relative;float:left;left:0 !important;top:0 !important;width:100%;height:auto}
+.comment-detail span, .comment-detail h5{float:left;width:100%}
+}
+
