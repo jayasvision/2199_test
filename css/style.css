@@ -99,6 +99,7 @@ h1, h2, h3, h4, h5, h6{
     margin-bottom:20px;
     font-weight:600;
 }
+
 h1{font-size:36px}
 h2{font-size:32px}
 h3{font-size:28px}
@@ -386,7 +387,7 @@ nav ul.nav li a{
 nav ul.nav li a:hover,
 nav ul.nav li a:focus,
 nav ul.nav li a:active{
-    background:none;
+    background-color: red
     color:#FFF;
 }
 nav ul li a:before, 
@@ -3036,7 +3037,7 @@ body {
 }
 
 .btn-create{
-    text-transform:lowercase !important;
+    text-transform:capitalize !important;
 }
 
 .pageSize {
